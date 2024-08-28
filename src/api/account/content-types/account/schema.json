@@ -1,0 +1,50 @@
+{
+    "kind": "collectionType",
+    "collectionName": "accounts",
+    "info": {
+      "singularName": "account",
+      "pluralName": "accounts",
+      "displayName": "Accounts"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "company_name": {
+        "type": "string"
+      },
+      "owner_name": {
+        "type": "string"
+      },
+      "owner_email": {
+        "type": "email"
+      },
+      "country": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "logo": {
+        "type": "media",
+        "multiple": false,
+        "allowedTypes": ["images"]
+      },
+      "invoices": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::invoice.invoice",
+        "mappedBy": "account"
+      },
+      "clients": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::client.client",
+        "mappedBy": "account"
+      }
+    }
+  }
+  

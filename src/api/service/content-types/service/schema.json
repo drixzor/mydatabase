@@ -1,0 +1,36 @@
+{
+    "kind": "collectionType",
+    "collectionName": "services",
+    "info": {
+      "singularName": "service",
+      "pluralName": "services",
+      "displayName": "Services"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "custom_id": {
+        "type": "string"
+      },
+      "discount": {
+        "type": "integer"
+      },
+      "quantity": {
+        "type": "integer"
+      },
+      "unitPrice": {
+        "type": "float"
+      },
+      "totalPrice": {
+        "type": "float"
+      }
+    }
+  }
+  

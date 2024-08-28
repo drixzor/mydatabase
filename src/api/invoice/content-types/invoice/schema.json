@@ -1,0 +1,51 @@
+{
+    "kind": "collectionType",
+    "collectionName": "invoices",
+    "info": {
+      "singularName": "invoice",
+      "pluralName": "invoices",
+      "displayName": "Invoices"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "name": {
+        "type": "string"
+      },
+      "date": {
+        "type": "date"
+      },
+      "discount": {
+        "type": "integer"
+      },
+      "tax": {
+        "type": "integer"
+      },
+      "custom_id": {
+        "type": "string"
+      },
+      "services": {
+        "type": "json"
+      },
+      "subTotal": {
+        "type": "integer"
+      },
+      "total": {
+        "type": "float"
+      },
+      "account": {
+        "type": "relation",
+        "relation": "manyToOne",
+        "target": "api::account.account",
+        "inversedBy": "invoices"
+      },
+      "client": {
+        "type": "relation",
+        "relation": "manyToOne",
+        "target": "api::client.client",
+        "inversedBy": "invoices"
+      }
+    }
+  }
+  

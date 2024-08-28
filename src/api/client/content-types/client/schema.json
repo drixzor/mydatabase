@@ -1,0 +1,45 @@
+{
+    "kind": "collectionType",
+    "collectionName": "clients",
+    "info": {
+      "singularName": "client",
+      "pluralName": "clients",
+      "displayName": "Clients"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "name": {
+        "type": "string"
+      },
+      "owner_name": {
+        "type": "string"
+      },
+      "owner_email": {
+        "type": "email"
+      },
+      "country": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "account": {
+        "type": "relation",
+        "relation": "manyToOne",
+        "target": "api::account.account",
+        "inversedBy": "clients"
+      },
+      "invoices": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::invoice.invoice",
+        "mappedBy": "client"
+      }
+    }
+  }
+  
