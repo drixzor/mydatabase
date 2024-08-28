@@ -4,11 +4,13 @@
     "info": {
       "singularName": "invoice",
       "pluralName": "invoices",
-      "displayName": "Invoices"
+      "displayName": "Invoices",
+      "description": ""
     },
     "options": {
       "draftAndPublish": true
     },
+    "pluginOptions": {},
     "attributes": {
       "name": {
         "type": "string"
@@ -48,4 +50,3 @@
       }
     }
   }
-  
